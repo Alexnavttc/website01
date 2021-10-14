@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //let food = true;
+        function pro(food)
+        {
+            return new Promise((res,rej)=>{
+            if(food)
+            {
+                res("I am right food");
+            }else
+            {
+                rej("It is wrong food");
+            }
+        });
+        
+    }
+        let onres = (output)=>
+        {
+            console.log(output);
+        }
+
+        let onrej = (error)=>
+        {
+            console.log(error);
+        }
+
+        pro(true).then(onres);
+        pro(true).catch(onrej);
+
+         
+        //console.log(pro);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
